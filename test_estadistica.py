@@ -8,7 +8,7 @@ class TestEstadistica(TestCase):
         self.assertEqual(Estadistica().stats(""), [0, 0], "Cadena vacia")
 
     def test_stats_unacadena(self):
-        self.assertEqual(Estadistica().stats("1"), [1], "Un numero")
+        self.assertEqual(Estadistica().stats("1"), [1,1], "Un numero")
 
     def test_stats_dosnumeros(self):
         self.assertEqual(Estadistica().stats("1,2"), [2], "Dos numeros")
