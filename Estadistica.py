@@ -5,7 +5,7 @@ class Estadistica:
         elif "," in cadena:
             numeros = cadena.split(",")
             suma = sum(map(int, numeros))
-            return [len(numeros), int(min(numeros)), int(max(numeros)), suma/len(numeros)]
+            return [len(numeros), int(min(numeros)), int(max(numeros)), suma/float(len(numeros))]
         else:
             return [int(cadena), int(cadena), int(cadena), int(cadena)]
 
