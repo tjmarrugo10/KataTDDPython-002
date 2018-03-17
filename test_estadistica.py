@@ -17,4 +17,7 @@ class TestEstadistica(TestCase):
         self.assertEqual(Estadistica().stats("1,2,3,4"), [4], "Multiples numeros")
 
     def test_stats_cadenavacia_minimo(self):
-        self.assertEqual(Estadistica().stats(""), [0, 0], "Cadena vacía y minimo")
+        self.assertEqual(Estadistica().stats(""), [0, 0], "Cadena vacia y minimo")
+
+    def test_statsunacadena_minimo(self):
+        self.assertEqual(Estadistica().stats("1"),[1,1],"Un numero y minimo")
