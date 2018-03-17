@@ -6,5 +6,5 @@ class Estadistica:
             numeros = cadena.split(",")
             return [len(numeros), int(min(numeros))]
         else:
-            return [1, 1, 1]
+            return [int(cadena), int(cadena), int(cadena)]
 
