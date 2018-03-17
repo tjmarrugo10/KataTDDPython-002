@@ -1,3 +1,4 @@
 class Estadistica:
     def stats(self, cadena):
-        pass
+        if cadena == "":
+            return [0]
