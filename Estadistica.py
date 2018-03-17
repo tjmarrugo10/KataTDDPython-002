@@ -4,8 +4,8 @@ class Estadistica:
             return [0, 0, 0, 0]
         elif "," in cadena:
             numeros = cadena.split(",")
-            return [len(numeros), int(min(numeros)),int(max(numeros))]
+            suma = sum(map(int, numeros))
+            return [len(numeros), int(min(numeros)), int(max(numeros)), suma/len(numeros)]
         else:
-
-            return [int(cadena), int(cadena), int(cadena),int(cadena)]
+            return [int(cadena), int(cadena), int(cadena), int(cadena)]
 
