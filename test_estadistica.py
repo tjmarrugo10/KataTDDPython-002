@@ -5,10 +5,10 @@ from Estadistica import Estadistica
 
 class TestEstadistica(TestCase):
     def test_stats(self):
-        self.assertEqual(Estadistica().stats(""), [0, 0,0], "Cadena vacia")
+        self.assertEqual(Estadistica().stats(""), [0, 0, 0], "Cadena vacia")
 
     def test_stats_unacadena(self):
-        self.assertEqual(Estadistica().stats("1"), [1, 1], "Un numero")
+        self.assertEqual(Estadistica().stats("1"), [1, 1, 1], "Un numero")
 
     def test_stats_dosnumeros(self):
         self.assertEqual(Estadistica().stats("1,2"), [2, 1], "Dos numeros")
@@ -17,10 +17,10 @@ class TestEstadistica(TestCase):
         self.assertEqual(Estadistica().stats("1,2,3,4"), [4, 1], "Multiples numeros")
 
     def test_stats_cadenavacia_minimo(self):
-        self.assertEqual(Estadistica().stats(""), [0, 0,0], "Cadena vacia y minimo")
+        self.assertEqual(Estadistica().stats(""), [0, 0, 0], "Cadena vacia y minimo")
 
     def test_stats_unacadena_minimo(self):
-        self.assertEqual(Estadistica().stats("1"), [1, 1], "Un numero y minimo")
+        self.assertEqual(Estadistica().stats("1"), [1, 1, 1], "Un numero y minimo")
 
     def test_stats_dosnumeros_minimo(self):
         self.assertEqual(Estadistica().stats("1,2"), [2, 1], "Dos numeros y minimo")
