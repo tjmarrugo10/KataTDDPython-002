@@ -35,4 +35,8 @@ class TestEstadistica(TestCase):
         self.assertEqual(Estadistica().stats("1,2"), [2, 1, 2], "Dos numeros,minimo,maximo")
 
     def test_stats_cadenavacia_promedio(self):
-        self.assertEqual(Estadistica().stats(""), [0, 0, 0, 0], "Cadena vacía y promedio")
+        self.assertEqual(Estadistica().stats(""), [0, 0, 0, 0], "Cadena vacia y promedio")
+
+    def test_stats_unnumero_promedio(self):
+        self.assertEqual(Estadistica().stats("1"),[1,1,1,1],"Un numero, minimo, maximo, promedio")
+
